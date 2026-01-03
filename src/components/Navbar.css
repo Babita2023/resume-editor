@@ -1,0 +1,73 @@
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 32px;
+  width: 32px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.login-btn {
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.login-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.signup-btn {
+  text-decoration: none;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.signup-btn:hover {
+  background-color: #000000;
+}
+.logo-img{
+    height:2rem;
+    border-radius: 50px;
+}
+.logo-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

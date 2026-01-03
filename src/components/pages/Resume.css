@@ -1,0 +1,196 @@
+/* Main Layout - Form on Left, Resume on Right */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px; /* Keeps space between the form and resume */
+  }
+  
+  /* Left Side - Form */
+  .form-container {
+    width: 35%;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+  .form-navigation button{
+    width: 30%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+ .project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.skills-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.add-btn {
+  padding: 6px 12px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+ 
+  #download-btn {
+    width: 30%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .download-btn:hover {
+    background: #0056b3;
+  }
+  .add-btn{
+    width: 30%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Right Side - Resume (A4 Size) */
+  /* Resume Container (A4 Size) */
+.resume-container {
+  width: 210mm;
+  min-height: 297mm; /* Use min-height to prevent extra space */
+  padding: 20mm;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Resume Header */
+.resume-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.resume-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top:-20px;
+  margin-bottom: 2px;
+}
+
+.resume-header p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+/* Resume Sections */
+.resume-section {
+  margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Headings */
+.resume-section h2 {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  margin-bottom: 2px;
+}
+
+/* General Text */
+.resume-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* List for Skills & Projects */
+.resume-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+  margin-bottom: 15px;;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.resume-section li{
+  margin-bottom:15px;
+}
+
+/* Flexbox for Education & Experience (Text Left, Date Right) */
+.resume-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  margin-bottom: 5px;
+}
+
+/* Text Content on Left */
+.resume-text {
+  flex-grow: 1;
+}
+
+/* Dates on Right */
+.resume-date {
+  text-align: right;
+  font-weight: bold;
+   font-style: italic;
+  min-width: 120px; /* Ensures dates align properly */
+}
+
+/* Prevent Bottom Gap */
+.resume-container > *:last-child {
+  flex-grow: 1;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top:20px;
+}
+
+.project-date {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
