@@ -1,9 +1,8 @@
-import Navbar from '../Navbar';
-import { Link } from 'react-router-dom';
-import Footer from '../Footer.jsx'
+import Navbar from "../components/Navbar.jsx";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer.jsx";
 
 import "./ResumeHome.css";
-
 
 export default function ResumeHome() {
   return (
@@ -18,12 +17,14 @@ export default function ResumeHome() {
         </h1>
 
         <p>
-          Create, edit, and preview your resume in real time.
-          Simple, fast, and ATS-friendly.
+          Create, edit, and preview your resume in real time. Simple, fast, and
+          ATS-friendly.
         </p>
 
         <div className="hero-buttons">
-           <Link to="/editor" className="primary-btn">Create</Link>
+          <Link to="/editor" className="primary-btn">
+            Create
+          </Link>
           <button className="secondary-btn">View Templates</button>
         </div>
       </section>
@@ -49,6 +50,5 @@ export default function ResumeHome() {
       {/* Footer */}
       <Footer />
     </div>
-    
   );
 }
