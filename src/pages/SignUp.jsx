@@ -15,7 +15,7 @@ export default function Signup(){
   return(
     <div className="signup-container">
 
-      <form className="signup-form" onSubmit={handleSubmit}>
+      <form className="signup-form" onSubmit={handleSubmit}  autoComplete="off">
 
         <h2>Create Account</h2>
 
