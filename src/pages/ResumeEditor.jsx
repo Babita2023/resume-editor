@@ -63,8 +63,12 @@ const ResumeEditor = () => {
       <Navbar />
 
       <div className="app-container">
+
+
+
         {/* Left Side - Form */}
-        <div className="form-container">
+        <div className="form-container flex flex-col">
+       
           <h2>Fill in Your Details</h2>
 
           {step === 1 && (
@@ -393,6 +397,7 @@ const ResumeEditor = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
