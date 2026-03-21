@@ -9,6 +9,15 @@
 //   </StrictMode>,
 // )
 
+// Ideas:
+
+// AI resume suggestions (later)
+
+// Job-specific resume (customize per role)
+
+// Portfolio + Resume combo (VERY UNIQUE)
+
+// Shareable resume link
 
 
 import React from 'react';

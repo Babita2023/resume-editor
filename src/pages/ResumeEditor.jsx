@@ -18,6 +18,7 @@ const ResumeEditor = () => {
     experience: [{ role: "", company: "", date: "" }],
     projects: "",
   });
+const [hasExperience, setHasExperience] = useState(true);
 
   const resumeRef = useRef(null);
 
@@ -63,12 +64,8 @@ const ResumeEditor = () => {
       <Navbar />
 
       <div className="app-container">
-
-
-
         {/* Left Side - Form */}
-        <div className="form-container flex flex-col">
-       
+        <div className="form-container">
           <h2>Fill in Your Details</h2>
 
           {step === 1 && (
@@ -245,19 +242,21 @@ const ResumeEditor = () => {
               ))}
 
               {/* Projects Section */}
-              <div className="project-title-row">
-                <h3>Projects</h3>
-                <button
-                  onClick={() =>
-                    setProjects([
-                      ...projects,
-                      { title: "", date: "", details: "" },
-                    ])
-                  }
-                  className="add-btn"
-                >
-                  Add Project
-                </button>
+              <div className="project-title-row flex items-center justify-between">
+                <h3 className="text-lg font-semibold">Projects</h3>
+                {projects.length < 3 && (
+                  <button
+                    onClick={() =>
+                      setProjects([
+                        ...projects,
+                        { title: "", date: "", points: [""] }, // initialize with one point
+                      ])
+                    }
+                    className="add-btn px-2 py-1 text-sm bg-blue-500 text-white rounded"
+                  >
+                    Add Project
+                  </button>
+                )}
               </div>
 
               {projects.map((project, index) => (
@@ -312,6 +311,7 @@ const ResumeEditor = () => {
             )}
           </div>
         </div>
+
 
         {/* Right Side - Resume Preview */}
 
@@ -397,7 +397,6 @@ const ResumeEditor = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
