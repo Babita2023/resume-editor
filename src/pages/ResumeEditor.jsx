@@ -67,7 +67,7 @@ const ResumeEditor = () => {
     <div className="main">
       <Navbar />
 
-      <div className="app-container">
+      <div className="app-container flex flex-col md:flex-row">
         {/* Left Side - Form */}
         <div className="form-container">
           <h2>Fill in Your Details</h2>
@@ -331,7 +331,7 @@ const ResumeEditor = () => {
 
         {/* Right Side - Resume Preview */}
 
-        <div className="resume-preview-wrapper">
+        <div className="resume-preview-wrapper w-full md:w-1/2">
           <div className="resume-container" ref={resumeRef}>
             <div className="resume-header">
               <h1>{resume.name || "Your Name"}</h1>

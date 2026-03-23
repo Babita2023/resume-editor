@@ -194,3 +194,11 @@
   font-size: 0.9rem;
   color: #555;
 }
+
+@media (max-width: 640px) {
+  .form-container,
+  .resume-preview-wrapper {
+    width: 100%;          /* smaller than full width */
+    margin: 0 auto;      /* center horizontally */
+  }
+}
