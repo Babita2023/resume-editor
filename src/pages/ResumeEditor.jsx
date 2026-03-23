@@ -4,6 +4,8 @@ import html2canvas from "html2canvas";
 import Navbar from "../components/Navbar.jsx";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+
 import "./Resume.css"; // Import CSS
 
 const ResumeEditor = () => {
@@ -12,13 +14,15 @@ const ResumeEditor = () => {
     contact: "",
     email: "",
     location: "",
+    linkedin: "",
+    github: "",
     summary: "",
     education: [{ degree: "", institution: "", date: "" }],
     skills: "",
     experience: [{ role: "", company: "", date: "" }],
     projects: "",
   });
-const [hasExperience, setHasExperience] = useState(true);
+  const [hasExperience, setHasExperience] = useState(true);
 
   const resumeRef = useRef(null);
 
@@ -88,11 +92,24 @@ const [hasExperience, setHasExperience] = useState(true);
                 className="input-field"
                 onChange={(e) => handleChange("email", e.target.value)}
               />
-              <input
+               <input
                 type="text"
-                placeholder="Linkedin Profile"
+                placeholder="Location"
                 className="input-field"
                 onChange={(e) => handleChange("location", e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="LinkedIn Profile URL"
+                className="input-field"
+                onChange={(e) => handleChange("linkedin", e.target.value)}
+              />
+
+              <input
+                type="text"
+                placeholder="GitHub Profile URL"
+                className="input-field"
+                onChange={(e) => handleChange("github", e.target.value)}
               />
               <h2>Summary</h2>
               <textarea
@@ -312,16 +329,42 @@ const [hasExperience, setHasExperience] = useState(true);
           </div>
         </div>
 
-
         {/* Right Side - Resume Preview */}
 
         <div className="resume-preview-wrapper">
           <div className="resume-container" ref={resumeRef}>
             <div className="resume-header">
               <h1>{resume.name || "Your Name"}</h1>
-              <p>
-                {resume.contact} | {resume.email} | {resume.location}
+              <p className="flex items-center gap-3 flex-wrap">
+                <FaPhone /> {resume.contact} | <FaEnvelope /> {resume.email} |  <FaMapMarkerAlt /> {resume.location} |
+
+                 {resume.linkedin && (
+                        <a
+                          href={resume.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="icon-link flex gap-1"
+                        >
+                          <FaLinkedin className="mt-1" />
+                        Linkedin
+                        </a>
+                            )} |
+
+                       {/* GitHub Icon */}
+                    {resume.github && (
+                           <a
+                              href={resume.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="icon-link flex gap-1"
+                            >
+                              <FaGithub className="mt-1"  />
+                               Github
+
+                              </a> 
+                            )}
               </p>
+
             </div>
 
             <div className="resume-section">
